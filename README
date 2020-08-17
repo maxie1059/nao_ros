@@ -21,7 +21,6 @@ There are three things we need for this connection: ROS,NAO and ros package to c
       
       For other versions of Python SDK, please follow the install Python SDK *inserted-version* guide from Aldebaran site.
       
-      
   3) For the ros package,...
   sudo apt-get install ros-*-nao-robot  (* for your version of ros, for example, ros-kinetic-nao-robot)
   sudo apt-get install ros-*-nao-meshes
@@ -31,15 +30,20 @@ That is all the setup we need to do. It is time for the main course.
 Note: If you are using Virtual Machine, try to change your network adapter setting to bridge network.
 
   1) roscore
+  
   2) Create a NAO broker with C++ SDK by...
     .<link-to-C++-SDK-extracted-file> - verbose - broker-ip <nao-ip-adress>
     Ex: ./Downloads/naoqi-sdk-2.1.4.13-linux64/naoqi - verbose - broker-ip 127.0.0.1
+    
   3) Open Choregraphe and connect to the robot you just create
+  
   4) Tell the system where to find ros packages (in this case, nao_bringup)
   source /opt/ros/kinetic/setup.bash
+  
   5) Bringup NAO with ROS
   roslaunch nao_bringup nao_full_py.launch nao_ip:=<nao-ip-adress> nao_port:=<nao-port-no>
   Ex: roslaunch nao_bringup nao_full_py.launch nao_ip:=127.0.0.1 nao_port:=9559
+  
   6) List out all the topic to see if ROS and NAO have connected
   rostopic list
    There should be at least these topic:
@@ -50,11 +54,13 @@ Note: If you are using Virtual Machine, try to change your network adapter setti
     -left sonar
     -right sonar
     -microphone
+    
    7) (optional) To see the robot in Rviz
    rosrun rviz rviz
     To see the robot, change fixed frame into base_link and add..robot model
-   8) Finally, download my code NAOtest (where NAO will move and walk at the same time) and put it in any package, then ...
-   rosrun <package> <script>
+    
+   8) Finally, download my code NAOtest (where NAO will move and walk at the same time), put it in any package and..
+    rosrun <package> <script>
    Ex: rosrun hello_world NAOtest
    Note: the dialog NAO say can only be viewed in Choregraphe
 
