@@ -20,7 +20,7 @@ There are three things we need for this connection: *ROS*,*NAO* and *ros package
   - After downloading those three, extract them. For Python SDK 2.8, I named my extracted file as *naoqi2.8*, then...
     ```
     echo export PYTHONPATH=${PYTHONPATH}:<link-to-site-packages-of-extracted-file> >> ~/.bashrc
-    echo export QI_SDK_PREFIX=<link-to-extracted-file-name> >> ~/.bashrc
+    echo export QI_SDK_PREFIX=<link-to-extracted-file> >> ~/.bashrc
     ```
     - For example:
     ```
