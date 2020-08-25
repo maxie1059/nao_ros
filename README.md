@@ -41,50 +41,50 @@ _That is all the setup we need to do. It is time for the main course._
 1) roscore
   
 2) Create a NAO broker(virtual NAO) with C++ SDK
-  ```
-  .<link-to-C++-SDK-extracted-file> - verbose - broker-ip <nao-ip-adress>
-  ```
+```
+.<link-to-C++-SDK-extracted-file> - verbose - broker-ip <nao-ip-adress>
+```
 For example:
-  ```
-  ./Downloads/naoqi-sdk-2.1.4.13-linux64/naoqi - verbose - broker-ip 127.0.0.1
-  ```
+```
+./Downloads/naoqi-sdk-2.1.4.13-linux64/naoqi - verbose - broker-ip 127.0.0.1
+```
 3) Open Choregraphe and connect to the robot we just created
 
 4) Tell the system where to find ros packages (in this case, nao_bringup)
-  ```
-  source /opt/ros/kinetic/setup.bash
-  ```
+```
+source /opt/ros/kinetic/setup.bash
+```
 5) Bringup NAO with ROS
-  ```
-  roslaunch nao_bringup nao_full_py.launch nao_ip:=<nao-ip-adress> nao_port:=<nao-port-no>
-  ```
+```
+roslaunch nao_bringup nao_full_py.launch nao_ip:=<nao-ip-adress> nao_port:=<nao-port-no>
+```
 For example:
-  ```
-  roslaunch nao_bringup nao_full_py.launch nao_ip:=127.0.0.1 nao_port:=9559
-  ```
+```
+roslaunch nao_bringup nao_full_py.launch nao_ip:=127.0.0.1 nao_port:=9559
+```
 6) List out all the topic to see if ROS and NAO have connected
-  ```
-  rostopic list
-  ```
-  - There should be at least these topic:
-    - joint_states
-    - tf
-    - top camera
-    - bottom camera
-    - left sonar
-    - right sonar
-    - microphone
+```
+rostopic list
+```
+- There should be at least these topic:
+  - joint_states
+  - tf
+  - top camera
+  - bottom camera
+  - left sonar
+  - right sonar
+  - microphone
     
 7) (optional) To see the robot in Rviz, simply `rosrun rviz rviz`. We won't be able to see the robot until we change fixed frame into base_link and add..robot model
     
 8) Finally, download my code NAOtest (where NAO will move and talk at the same time), put it in any package and..
-  ```
-  rosrun <package> <script>
-  ```
+```
+rosrun <package> <script>
+```
 For example:
-  ```
-  rosrun hello_world NAOtest
-  ```
+```
+rosrun hello_world NAOtest
+```
 
 *Note:* the dialog that NAO says can only be viewed in Choregraphe
 
