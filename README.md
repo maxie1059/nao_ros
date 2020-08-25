@@ -4,29 +4,29 @@ There are three things we need for this connection: *ROS*,*NAO* and *ros package
 1. I assumed you already install ROS. If not, go to Google, search for "install ros" and there will be instructions to follow on ros.org website.
   
 2. For NAO robot, we simulate the bringup then try it on a real NAO robot (if you had one)
-  - There are three things we need to setup: Choregraphe (or Rviz), C++ SDK and Python SDK.
-    - For Rviz, simply...
-    ```
-      sudo apt-get update
-      sudo apt-get install rviz
-    ```
-    - From Softbank Robotics webpage: https://www.softbankrobotics.com/emea/en/support/nao-6/downloads-softwares. Download:
-      - Choregraphe v2.1.4
-      - C++ SDK v2.1.4
-      - Python SDK v2.8 (make sure you are using python 2.7)
-    - *Note:* you can download any version, I chose these particular versions because it works for me
+- There are three things we need to setup: Choregraphe (or Rviz), C++ SDK and Python SDK.
+  - For Rviz, simply...
+  ```
+  sudo apt-get update
+  sudo apt-get install rviz
+  ```
+  - From Softbank Robotics webpage: https://www.softbankrobotics.com/emea/en/support/nao-6/downloads-softwares. Download:
+    - Choregraphe v2.1.4
+    - C++ SDK v2.1.4
+    - Python SDK v2.8 (make sure you are using python 2.7)
+  - *Note:* you can download any version, I chose these particular versions because it works for me
       
-    - After downloading those three, extract them. For Python SDK 2.8, I named my extracted file as *naoqi2.8*, then...
-      ```
-      echo export PYTHONPATH=${PYTHONPATH}:<link-to-site-packages-of-extracted-file> >> ~/.bashrc
-      echo export QI_SDK_PREFIX=<link-to-extracted-file-name> >> ~/.bashrc
-      ```
-        - For example:
-      ```
-      echo export PYTHONPATH=${PYTHONPATH}:/home/myuser/Downloads/naoqi2.8/lib/python2.7/site-packages
-      echo export QI_SDK_PREFIX=/home/myuser/Downloads/naoqi2.8
-      ```
-        - For other versions of Python SDK, please follow the installation guide from Aldebaran site.
+  - After downloading those three, extract them. For Python SDK 2.8, I named my extracted file as *naoqi2.8*, then...
+    ```
+    echo export PYTHONPATH=${PYTHONPATH}:<link-to-site-packages-of-extracted-file> >> ~/.bashrc
+    echo export QI_SDK_PREFIX=<link-to-extracted-file-name> >> ~/.bashrc
+    ```
+    - For example:
+    ```
+    echo export PYTHONPATH=${PYTHONPATH}:/home/myuser/Downloads/naoqi2.8/lib/python2.7/site-packages
+    echo export QI_SDK_PREFIX=/home/myuser/Downloads/naoqi2.8
+    ```
+    - For other versions of Python SDK, please follow the installation guide from Aldebaran site.
       
 3. For the ros package,
   ```
