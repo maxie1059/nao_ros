@@ -1,6 +1,6 @@
 **ROS CONNECTION TO NAO ROBOT**
 
-There are three things we need for this connection: *ROS*,*NAO* and *ros package* to connect the robot with ROS.
+There are three things we need for this connection: *ROS*, *NAO* and *ros package* to connect the robot with ROS.
 1. I assumed you already install ROS. If not, go to Google, search for "install ros" and there will be instructions to follow on ros.org website.
   
 2. For NAO robot, we simulate the bringup then try it on a real NAO robot (if you had one)
@@ -75,7 +75,7 @@ rostopic list
   - right sonar
   - microphone
     
-7) (optional) To see the robot in Rviz, simply `rosrun rviz rviz`. We won't be able to see the robot until we change fixed frame into base_link and add..robot model
+7) (optional) To see the robot in Rviz, simply `rosrun rviz rviz`. Make sure to change fixed frame into base_link and add..robot model
     
 8) Finally, download my code NAOtest (where NAO will move and talk at the same time), put it in any package and..
 ```
