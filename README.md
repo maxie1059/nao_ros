@@ -1,5 +1,7 @@
 # ROS CONNECTION TO NAO ROBOT
 
+**SETUPS**
+
 There are three things we need for this connection: *ROS*, *NAO* and *ros package* to connect the robot with ROS.
 1. I assumed you already install ROS. If not, go to Google, search for "install ros" and there will be instructions to follow on ros.org website.
   
@@ -35,9 +37,10 @@ There are three things we need for this connection: *ROS*, *NAO* and *ros packag
   sudo apt-get install ros-*-nao-robot  (* for your version of ros, for example, ros-kinetic-nao-robot)
   sudo apt-get install ros-*-nao-meshes
   ```
-_That is all the setup we need to do. It is time for the main course._
-
+  
 *Note:* If you are using Virtual Machine, now is the time to change network adapter setting to bridge network.
+
+**BRINGUP SIMULATION**
 
 1) roscore
   
