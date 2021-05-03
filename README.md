@@ -1,4 +1,4 @@
-**ROS CONNECTION TO NAO ROBOT**
+# ROS CONNECTION TO NAO ROBOT
 
 There are three things we need for this connection: *ROS*, *NAO* and *ros package* to connect the robot with ROS.
 1. I assumed you already install ROS. If not, go to Google, search for "install ros" and there will be instructions to follow on ros.org website.
