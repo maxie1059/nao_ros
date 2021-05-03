@@ -10,14 +10,14 @@ There are three things we need for this connection: *ROS*, *NAO* and *ros packag
     sudo apt-get update
     sudo apt-get install rviz
     ```
-  - From Softbank Robotics webpage: https://www.softbankrobotics.com/emea/en/support/nao-6/downloads-softwares. Download:
+  - From [Softbank Robotics webpage](https://www.softbankrobotics.com/emea/en/support/nao-6/downloads-softwares). Download:
     - Choregraphe v2.1.4
     - C++ SDK v2.1.4
     - Python SDK v2.8 (make sure you are using python 2.7)
 
   *Note:* you can download any version, I chose these particular versions because it works for me.
 
-  - After downloading those three, extract them. For Python SDK 2.8, I named my extracted file as *naoqi2.8*, then...
+  - After downloading those three, extract them. For Python SDK 2.8, I named my extracted file as *naoqi2.8*, then
     ```
     echo export PYTHONPATH=${PYTHONPATH}:<link-to-site-packages-of-extracted-file> >> ~/.bashrc
     echo export QI_SDK_PREFIX=<link-to-extracted-file> >> ~/.bashrc
@@ -77,11 +77,11 @@ rostopic list
     
 7) (optional) To see the robot in Rviz, simply `rosrun rviz rviz`. Make sure to change fixed frame into base_link and add..robot model
     
-8) Finally, download my code NAOtest (where NAO will move and talk at the same time), put it in any package and..
+8) Finally, write some python scripts with NAO API, put it in any package and rosrun it.
 ```
 rosrun <package> <script>
 ```
-For example:
+For example, I put my script NAOtest in package called hello_world:
 ```
 rosrun hello_world NAOtest
 ```
